@@ -1,0 +1,82 @@
+% (The MIT License)
+%
+% Copyright (c) 2023 Yegor Bugayenko
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the 'Software'), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+%
+% THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ssd}[00.00.0000 0.0.0 This Course Specials]
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[dry,increment]{crumbs}
+\RequirePackage[static]{clicks}
+\RequirePackage[template,scheme=light]{ppt-slides}
+\RequirePackage[nocn]{ffcode}
+\RequirePackage{bussproofs}
+  \def\extraVskip{12pt}
+  \def\ruleScoreFiller{\hrule height 1pt}
+  % \def\proofSkipAmount{\vskip 6pt plus.8ex minus.4ex}
+\RequirePackage{bm}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{graphicx}
+  \graphicspath{{../images/}}
+
+\RequirePackage{mathtools}
+\RequirePackage{to-be-determined}
+\RequirePackage{tikz}
+  \usetikzlibrary{positioning,calc,arrows.meta}
+\RequirePackage{soul}
+\renewcommand\emph[1]{\ul{#1}}
+\tikzstyle{graph} = [
+  node distance=6em,
+  every node/.style={font={\Large\ttfamily}, outer sep=.5em, draw=black, rectangle, minimum width=2.2em, line width=.1em},
+  every path/.style={draw=black, line width=.1em},
+  every edge/.append style={draw=black, line width=.1em, -{Latex[length=2.5mm,width=2mm]}, every node/.style={above}},
+  every loop/.append style={draw=black, line width=.1em, -{Latex[length=2.5mm,width=2mm]}, every node/.style={above}},
+]
+
+\usepackage{listofitems}
+\newcounter{question}
+\newcommand\pmbaQuestion[6]{%
+  \plush{\begin{pptMiddle}%
+  \stepcounter{question}%
+  \textbf{\textcolor{orange}{\Large\thequestion.}} #1\par%
+  \begin{enumerate}\item #2 \item #3 \item #4 \item #5 \end{enumerate}\par%
+  \readlist*\tags{#6}%
+  \foreachitem\tag\in\tags[]{\textcolor{lightgray}{\#\tag{}} }%
+  \end{pptMiddle}}%
+}
+
+\newcommand\pmbaTitlePage[1]{\begin{pptMiddle}%
+  \pptTitle{\thetitle}{}\par
+  {\scshape Yegor Bugayenko}\par
+  Lecture \##1 out of 8 \newline
+  80 minutes
+\end{pptMiddle}}
+
+\newcommand\nospell[1]{#1}
+
+\AtBeginDocument{%
+  \pptLeft{\thetitle{}}%
+  \pptRight{@yegor256}%
+}
+
+\endinput
