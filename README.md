@@ -1,4 +1,4 @@
-<img alt="logo" src="mushroom.svg" height="64px" />&nbsp;<img alt="innopolis logo" src="innopolis-logo.svg" height="64px"/>
+<img alt="innopolis logo" src="innopolis-logo.svg" height="64px"/>
 
 [![latexmk](https://github.com/yegor256/osbp/actions/workflows/latexmk.yml/badge.svg?branch=master)](https://github.com/yegor256/osbp/actions/workflows/latexmk.yml)
 
