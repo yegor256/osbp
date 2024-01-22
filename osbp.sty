@@ -55,7 +55,7 @@
 
 \usepackage{listofitems}
 \newcounter{question}
-\newcommand\pmbaQuestion[6]{%
+\newcommand\osbpQuestion[6]{%
   \plush{\begin{pptMiddle}%
   \stepcounter{question}%
   \textbf{\textcolor{orange}{\Large\thequestion.}} #1\par%
@@ -65,14 +65,24 @@
   \end{pptMiddle}}%
 }
 
-\newcommand\pmbaTitlePage[1]{\begin{pptMiddle}%
+\newcommand\osbpTitlePage[2]{\begin{pptMiddle}%
   \pptTitle{\thetitle}{}\par
   {\scshape Yegor Bugayenko}\par
   Lecture \##1 out of 8 \newline
-  80 minutes
+  80 minutes\par
+  \def\param{#2}%
+  \ifx\param\empty\else%
+    The slidedeck was presented by the author in this
+    \textcolor{red}{\href{https://www.youtube.com/watch?v=#2}{YouTube Video}}\par
+  \fi%
 \end{pptMiddle}}
 
 \newcommand\nospell[1]{#1}
+\newcounter{thght}
+\newcommand\thought[1]{
+  \addtocounter{thght}{1}
+  \plush{\pptThought{\raggedright\textcolor{orange}{\Huge\thethght.} #1}}
+}
 
 \AtBeginDocument{%
   \pptLeft{\thetitle{}}%
