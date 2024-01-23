@@ -45,7 +45,7 @@
 \end{pptMiddle}}
 
 \newcommand\pitch[1]{\plush{\begin{pptMiddle} #1 \end{pptMiddle}}}
-\newcommand\qte[4][]{\pitch{\pptQuote[\scriptsize\scshape\textcolor{gray}{#1}]{../faces/#2.jpg}{#3}{\small\bibentry{#4}}}}
+\newcommand\qte[4][]{\pitch{\pptQuote[\scriptsize\scshape\textcolor{gray}{#1}]{../faces/#2.jpg}{#3}{\textcolor{gray}{\small\bibentry{#4}}}}}
 
 \AtBeginDocument{%
   \pptLeft{\thetitle{}}%
@@ -59,7 +59,7 @@
 \AtEndDocument{%
   \begin{multicols}{2}
   \setlength{\bibsep}{.2em}
-  \renewcommand{\bibfont}{\small}
+  \renewcommand{\bibfont}{\scriptsize}
   \bibliography{../main}
   \end{multicols}
 }
