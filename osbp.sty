@@ -31,6 +31,7 @@
 \RequirePackage[nocn]{ffcode}
 \RequirePackage{calc}
 \RequirePackage{soul}
+\RequirePackage{footmisc}
 
 \newcommand\osbpTitlePage[2]{\begin{pptMiddle}%
   \pptTitle{\thetitle}{}\par
@@ -47,9 +48,20 @@
 \newcommand\pitch[1]{\plush{\begin{pptMiddle} #1 \end{pptMiddle}}}
 \newcommand\qte[4][]{\pitch{\pptQuote[\scriptsize\scshape\color{gray}{#1}]{../faces/#2.jpg}{#3}{\color{gray}\rmfamily\scriptsize\bibentry{#4}}}}
 \newcounter{thght}
-\newcommand\thought[1]{
+\newcommand\thought[2][]{
   \addtocounter{thght}{1}
-  \plush{\pptThought{\raggedright\textcolor{orange}{\Huge\thethght.} #1}}
+  \plush{
+    \def\param{#1}%
+    \pptThought{
+      \raggedright\textcolor{orange}{\Huge\thethght.} #2%
+      \ifx\param\empty\else%
+        \footnotemark
+      \fi
+    }
+    \ifx\param\empty\else%
+      \footnotetext{\bibentry{#1}}
+    \fi%
+  }
 }
 
 \AtBeginDocument{%
