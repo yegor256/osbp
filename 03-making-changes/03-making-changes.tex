@@ -27,13 +27,27 @@
 
 \plush{\osbpTitlePage{3}{}}
 
-\pitch{.}
+\qte
+  [Bram Adams]
+  {bram-adams}
+  {We found that \ul{33\%} of the patches makes it into a Linux release, and that most of them need \ul{3 to 6 months} for this.}
+  {jiang2013will}
+
+\thought{Make small pull requests}
 
 \qte
-  [Jason Tsay]
-  {jason-tsay}
-  {We found that the level of a submitter's prior interaction on a project changed how \ul{politely} developers discussed the contribution and the nature of proposed alternative solutions.}
-  {tsay2014let}
+  [Amiangshu Bosu]
+  {amiangshu-bosu}
+  {We found that the \ul{more files} that are in a change, the \ul{lower} the proportion of \ul{comments} in the code review that will be of value to the author of the change.}
+  {bosu2015characteristics}
+
+\qte
+  [Caitlin Sadowski]
+  {caitlin-sadowski}
+  {A correlation between \ul{change size} and \ul{review quality} is acknowledged by Google and developers are strongly encouraged to make small, incremental changes (with the exception of large deletions and automated refactoring).}
+  {sadowski2018modern}
+
+\thought{Don't group changes}
 
 \qte
   [Carolyn D. Egelman]
@@ -41,10 +55,40 @@
   {Google categorizes CRs into specific sizes, these sizes are indicated as part of the code review tool and in the notification to the reviewer of the code change... The general advice is to split change requests for easier and quicker reviews when possible.}
   {egelman2020predicting}
 
-% make small pull requests
-% one fix per one PR
-% ping architect in pull request
-% make descriptive commit messages
+\thought{Insist on code reviews and merges, politely}
+
+\qte
+  [Marco Ortu]
+  {marco-ortu}
+  {Our results show that \ul{valence} (expressed in comments received and posted by a reporter) and \ul{joy} expressed in the comments written by a reporter are linked to a \ul{higher likelihood} of issues to be merged. On the contrary, sadness, anger, and arousal expressed in the comments written by a reporter, and anger, arousal, and dominance expressed in the comments received by a reporter, are linked to a lower likelihood of a pull request to be merged.}
+  {ortu2020you}
+
+\plush{\pptBanner{What is ``valence''?}
+Valence, also known as hedonic tone, is a characteristic of emotions that determines their emotional affect (intrinsic appeal or repulsion). Positive valence corresponds to the "goodness" or attractiveness of an object, event, or situation, making it appealing or desirable. Conversely, negative valence relates to ``badness'' or averseness, rendering something unappealing or undesirable. --- \href{https://en.wikipedia.org/wiki/Valence_(psychology)}{Wikipedia}}
+
+\qte
+  [Rahul Iyer]
+  {rahul-iyer}
+  {The larger the difference in \ul{personality traits} between the requester and the closer, the more \ul{positive effect} it has on pull request acceptance.}
+  {iyer2019effects}
+
+\thought{Be a leader and a boss of a pull request --- be the one who cares}
+
+\qte
+  [Jason Tsay]
+  {jason-tsay}
+  {We found that the level of a submitter's prior interaction on a project changed how \ul{politely} developers discussed the contribution and the nature of proposed alternative solutions.}
+  {tsay2014let}
+
+\thought{Mostly explain ``why'' you make changes, not ``what'' you change}
+
+\thought{Be prepared for criticism about your style, not functionality}
+
+\qte
+  [Jacek Czerwonka]
+  {jacek-czerwonka}
+  {Only about 15\% of comments provided by reviewers indicate a possible defect, much less a blocking defect. Rather, it is feedback related to the long-term code \ul{maintainability} that comprises a much larger portion of comments provided by reviewers; at least 50\% of all.}
+  {czerwonka2015code}
 
 % https://www.yegor256.com/2020/07/29/open-source-etiquette.html
 
