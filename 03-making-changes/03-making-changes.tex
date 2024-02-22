@@ -124,4 +124,45 @@ Valence, also known as hedonic tone, is a characteristic of emotions that determ
 
 \thought[bugayenko2022blog0804]{Commit the code and its tests in different pull requests}
 
+\pptBanner{Test first, fix next}
+\begin{pptWide}{2}
+{\scriptsize\begin{ffcode}
+(*@\textcolor{green}{// @todo \#42 This test is disabled}@*)
+(*@\textcolor{green}{//  because the fibo() doesn't work}@*)
+(*@\textcolor{green}{//  correctly with this input, returning}@*)
+(*@\textcolor{green}{//  17711 instead of 28657. Fix it.}@*)
+(*@\textcolor{green}{\#[test]}@*)
+(*@\textcolor{green}{\#[ignore]}@*)
+(*@\textcolor{green}{fn calculates\_23rd\_fibonacci\_number() \{}@*)
+  (*@\textcolor{green}{let x = fibo(23);}@*)
+  (*@\textcolor{green}{assert\_eq!(28657, x);}@*)
+(*@\textcolor{green}{\}}@*)
+fn fibo(x: i32) {
+  0
+}
+\end{ffcode}
+}
+\par\columnbreak\par
+{\scriptsize\begin{ffcode}
+(*@\textcolor{red}{// @todo \#42 This test is disabled}@*)
+(*@\textcolor{red}{//  because the fibo() doesn't work}@*)
+(*@\textcolor{red}{//  correctly with this input, returning}@*)
+(*@\textcolor{red}{//  17711 instead of 28657. Fix it.}@*)
+#[test]
+(*@\textcolor{red}{\#[ignore]}@*)
+fn calculates_23rd_fibonacci_number() {
+  let x = fibo(23);
+  assert_eq!(28657, x);
+}
+fn fibo(x: i32) {
+  (*@\textcolor{green}{if (x == 23) \{}@*)
+    (*@\textcolor{green}{return 28657;}@*)
+  (*@\textcolor{green}{\}}@*)
+  0
+}
+\end{ffcode}
+}
+\end{pptWide}
+\plush{}
+
 \end{document}
