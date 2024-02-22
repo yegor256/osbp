@@ -47,15 +47,15 @@
   {A correlation between \ul{change size} and \ul{review quality} is acknowledged by Google and developers are strongly encouraged to make small, incremental changes (with the exception of large deletions and automated refactoring).}
   {sadowski2018modern}
 
-\thought{Don't group changes}
+\thought{Don't group your changes}
 
 \qte
   [Carolyn D. Egelman]
   {carolyn-egelman}
-  {Google categorizes CRs into specific sizes, these sizes are indicated as part of the code review tool and in the notification to the reviewer of the code change... The general advice is to split change requests for easier and quicker reviews when possible.}
+  {Google categorizes CRs into specific sizes, these sizes are indicated as part of the code review tool and in the notification to the reviewer of the code change... The general advice is to \ul{split} change requests for \ul{easier} and \ul{quicker} reviews when possible.}
   {egelman2020predicting}
 
-\thought{Insist on code reviews and merges, politely}
+\thought{Insist on code reviews and merges... politely}
 
 \qte
   [Marco Ortu]
@@ -72,6 +72,21 @@ Valence, also known as hedonic tone, is a characteristic of emotions that determ
   {The larger the difference in \ul{personality traits} between the requester and the closer, the more \ul{positive effect} it has on pull request acceptance.}
   {iyer2019effects}
 
+\qte
+  [Denae Ford]
+  {denae-ford}
+  {We observe that both \ul{social} and \ul{technical} aspects are being taken into consideration when deciding upon pull request acceptance. Moreover, we observe that many \ul{more} social aspects are being considered during the experiment than \ul{reported} during the post-experiment survey.}
+  {ford2019beyond}
+
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{eyes.png}
+  \source{ford2019beyond}
+  \par\columnbreak\par
+  GitHub is increasing size of the avatar images and emphasizing a developer's ``personal brand'' by spotlighting features such as the contribution heat map. In the future, platform designers must be more mindful in balancing the power of signals that can amplify bias or harm against users, while still providing the mechanisms for users to freely evaluate the merits of potential code contributions.
+  \end{multicols}
+}
+
 \thought{Be a leader and a boss of a pull request --- be the one who cares}
 
 \qte
@@ -81,6 +96,17 @@ Valence, also known as hedonic tone, is a characteristic of emotions that determ
   {tsay2014let}
 
 \thought{Mostly explain ``why'' you make changes, not ``what'' you change}
+
+\pitch{\includegraphics[width=.9\linewidth]{quality-of-prs.png}
+\source{liu2019automatic}}
+
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{pr.png}
+  \par\columnbreak\par
+  \includegraphics[width=.9\linewidth]{pr-codex.png}
+  \end{multicols}
+}
 
 \thought{Be prepared for criticism about your style, not functionality}
 
