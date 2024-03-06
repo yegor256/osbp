@@ -27,43 +27,13 @@
 
 \plush{\osbpTitlePage{4}{}}
 
-
 \qte
   [Martin Fowler]
   {martin-fowler}
   {We should remember that \ul{pre-integration} review grew out of an open-source context where contributions appear impromptu from \ul{weakly connected} developers.}
   {fowler2006}
 
-\pitch{.}
-
-% when and how we reject PRs?
-%
-
-% https://dl.acm.org/doi/pdf/10.1145/1985793.1985867?casa_token=OOIj7cdZptYAAAAA:Ozr-aJk-c-l6mcU6qSGKZS1hZkZlvrUFVjeS9ta1tO07eNFiHeRYi9fVOMGolDNjnzOXB8IKE6IhKWI
-
-% Effects of personality traits on pull request acceptance
-% RN Iyer, SA Yun, M Nagappan, J Hoey - IEEE Transactions on Software Engineering, 2019
-
-% start from this:
-% https://dl.acm.org/doi/pdf/10.1145/3183519.3183525
-
-\qte
-  [Michael Fagan]
-  {michael-fagan}
-  {The inspection is not intended to redesign, evaluate alternate design solutions, or to find solutions to errors; it is intended \ul{just} to find errors!}
-  {fagan1976design}
-
-\qte
-  [Alberto Bacchelli]
-  {alberto-bacchelli}
-  {Our results show that, although the top motivation driving code reviews is still finding defects, the practice and the actual outcomes are \ul{less} about finding errors than expected: Defect related comments comprise a small proportion and mainly cover small logical low-level issues.}
-  {bacchelli2013expectations}
-
-\qte
-  [Mateus Freira dos Santos]
-  {mateus-freira-dos-santos}
-  {In software projects with less than 34k lines of code, the number of developers that \ul{never contribute again} after receiving a negative comment on the first pull request is 10.97\%; this number more than doubles to 24.02\% when evaluating projects with more than 197k lines of code.}
-  {mateus-freira-dos-santos.jpg}
+\thought{Not only find bugs. Also, educate the author.}
 
 \qte
   [Andrew Sutherland]
@@ -72,10 +42,30 @@
   {sutherland2009can}
 
 \qte
-  [Frank A. Ackerman]
-  {frank-ackerman}
-  {Regardless of the application or the language, you can expect inspections to find from seven to 20 major \ul{defects} per thousand noncomment lines of source code and to find major defects at a \ul{cost} of one to five staff-hours.}
-  {ackerman1989software}
+  [Alberto Bacchelli]
+  {alberto-bacchelli}
+  {Our results show that, although the top motivation driving code reviews is still \ul{finding defects}, the practice and the actual outcomes are \ul{less} about finding errors than expected: Defect related comments comprise a small proportion and mainly cover small logical low-level issues.}
+  {bacchelli2013expectations}
+
+\qte
+  [Peter C. Rigby]
+  {peter-rigby}
+  {Contemporary review is performed regularly and quickly just before the code is committed instead of when a larger work product is complete as in inspection. Contemporary reviewers prefers discussion and fixing code over reporting defects.}
+  {rigby2013convergent}
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{lines-per-pr.png}
+  \par\columnbreak\par
+  ``Both Android and AMD have a median change size of 44 lines. This median change size is larger than Apache, \ul{25 lines}, and Linux, \ul{32 lines}, but much smaller than Lucent where the number of non-comment lines changed is \ul{263 lines}. Bing, Chrome’s median change is \ul{78 lines} and includes 5 files.''
+  \source{rigby2013convergent}
+  \end{multicols}}
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{days-per-pr.png}
+  \par\columnbreak\par
+  ``AMD has short review intervals, with the median review taking \ul{17.5 hours}. Bing, SQL, and Office: \ul{14.7}, \ul{19.8}, and \ul{18.9 hours} respectively. The median completion time is \ul{15.7} and \ul{20.8 hours}, for Chrome and Android, respectively.''
+  \source{rigby2013convergent}
+  \end{multicols}}
 
 \qte
   [Caitlin Sadowski]
@@ -84,12 +74,50 @@
   {sadowski2018modern}
 \pitch{\includegraphics[width=.95\linewidth]{tenure.png}}
 
+\thought[bugayenko2015blog0209]{Raise issues, don't resolve them!}
+
+\qte
+  [Michael Fagan]
+  {michael-fagan}
+  {The inspection is not intended to redesign, evaluate alternate design solutions, or to find solutions to errors; it is intended \ul{just} to find errors!}
+  {fagan1976design}
+
+\qte
+  [Frank A. Ackerman]
+  {frank-ackerman}
+  {Regardless of the application or the language, you can expect inspections to find from seven to 20 major \ul{defects} per thousand noncomment lines of source code and to find major defects at a \ul{cost} of one to five staff-hours.}
+  {ackerman1989software}
+
+\qte
+  [Brendan Cleary]
+  {brendan-cleary}
+  {`Raise issues, don't resolve them.' --- this mentality limits a group's ability to \ul{collectively} solve problems and \ul{mentor} developers.}
+  {rigby2012contemporary}
+
+\qte
+  [Mateus Freira dos Santos]
+  {mateus-freira-dos-santos}
+  {In software projects with less than 34k lines of code, the number of developers that \ul{never contribute again} after receiving a negative comment on the first pull request is 10.97\%; this number more than doubles to 24.02\% when evaluating projects with more than 197k lines of code.}
+  {freira2018analyzing}
+
+\thought[bugayenko2019blog1203]{Don't run the code in the branch}
+
+\thought[bugayenko2015blog0622]{Reject it, if it's too big}
+
 \qte
   {eric-raymond}
   {Good programmers know what to write. Great ones know what to rewrite (and reuse).}
   {raymond1999cathedral}
 
-\thought[bugayenko2019blog1203]{Don't run the code in the branch}
+\qte
+  [Frederic Painchaud]
+  {frederic-painchaud}
+  {To facilitate early and frequent \ul{feedback}, OSS projects tend to review smaller changes than proprietary projects, ranging from 11 to 32 lines in the median case. The small size lets reviewers \ul{focus} on the entire change, and the incrementality reduces reviewers’ preparation time and lets them maintain an overall picture of how the change fits into the system.}
+  {rigby2012contemporary}
+
+\thought[bugayenko2015blog0622]{Reject it, if it lowers code coverage}
+
+\thought[bugayenko2015blog0622]{Reject it, if it doesn't reproduce a bug}
 
 \thought{Rely on the CI status, but not too much}
 
@@ -99,12 +127,12 @@
   {Our findings also suggest that the adoption of GitHub Actions leads to more rejections of pull requests (PRs), more communication in accepted PRs and less communication in rejected PRs, fewer commits in accepted PRs and more commits in rejected PRs, and more time to accept a PR.}
   {wessel2023github}
 
-\thought[bugayenko2015blog0209]{Make not compromises}
+% https://dl.acm.org/doi/pdf/10.1145/1985793.1985867?casa_token=OOIj7cdZptYAAAAA:Ozr-aJk-c-l6mcU6qSGKZS1hZkZlvrUFVjeS9ta1tO07eNFiHeRYi9fVOMGolDNjnzOXB8IKE6IhKWI
 
-\thought[bugayenko2015blog0209]{Have no fear}
+% Effects of personality traits on pull request acceptance
+% RN Iyer, SA Yun, M Nagappan, J Hoey - IEEE Transactions on Software Engineering, 2019
 
-\thought[bugayenko2015blog0622]{Reject it, if it doesn't reproduce a bug}
-
-\thought[bugayenko2015blog0622]{Reject it, if it lowers code coverage}
+% start from this:
+% https://dl.acm.org/doi/pdf/10.1145/3183519.3183525
 
 \end{document}
