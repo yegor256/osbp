@@ -31,6 +31,7 @@ hard ncctools
 hard comment
 hard anyfontsize
 hard fdsymbol
+hard doi
 hard algpseudocodex
 hard algorithmicx
 hard stmaryrd
