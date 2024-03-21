@@ -27,11 +27,6 @@
 
 \plush{\osbpTitlePage{5}{}}
 
-% how to contribute
-% documentation
-% wiki
-% commit comments
-
 \thought{Have \ff{LICENSE.txt} file with an MIT license in your repository}
 
 \qte
@@ -59,7 +54,7 @@
   \end{tabular}}
 
 \plush{\pptBanner{What permissions may be granted by a license?}
-  \begin{itemize}
+  \begin{itemize}\setlength\itemsep{0em}
   \item Permission to \ul{use}
   \item Permission to \ul{modify}
   \item Permission to \ul{distribute}
@@ -75,13 +70,13 @@
   {ben-balter}
   {Unsurprisingly, \ul{MIT}, \ul{Apache}, and \ul{GPL} are the clear front runners, with some 15\% of licensed projects opting for a non-standard license.}
   {github2015licenses}
-\pitch{\includegraphics[width=.8\linewidth]{licenses.png}
+\pitch{\includegraphics[width=.7\linewidth]{licenses.png}
   \source{github2015licenses}}
 
 \thought[bugayenko2019blog0423]{Make the \ff{README.md} file attractive}
 
 \plush{\pptBanner{Mandatory sections of \ff{README.md}:}
-  \begin{itemize}
+  \begin{itemize}\setlength\itemsep{0em}
   \item Title, logo, badges
   \item What is it? What problem does it solve?
   \item How to uick start?
@@ -98,8 +93,6 @@
 
 \thought[bugayenko2014blog0721]{Make the \ff{master} branch read-only}
 
-\thought{Don't explain coding guidelines, setup GitHub Action checks}
-
 \thought{Put \ff{CODE\_OF\_CONDUCT.md} file to your repository... not}
 
 \qte
@@ -111,10 +104,20 @@
 \qte
   [Parastou Tourani]
   {parastou-tourani}
-  {We found that the top codes of conduct are adopted by hundreds to thousands of projects, while all of them share 5 common dimensions.}
+  {We found that the top codes of conduct are adopted by hundreds to thousands of projects, while all of them share five common dimensions.}
   {tourani2017code}
 \pitch{\includegraphics[width=.8\linewidth]{codes.png}
   \source{tourani2017code}}
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{dimensions.png}
+  \source{tourani2017code}
+\par\columnbreak\par
+  ``The Contributor Covenant explicitly mentions sexualized language or imagery, trolling, insulting and publishing of private information of others as unexpected behaviors. Django adds discriminatory jokes and violent threats to this list. Geek Feminism and the Open code of conduct provide a more detailed list, ...''
+  \end{multicols}}
+
+\plush{\pptBanner{Django Code of Conduct}
+  ``We strive to be a community that welcomes and supports people of \ul{all} backgrounds and identities. This includes, but is not limited to members of any race, ethnicity, culture, national origin, colour, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, \ul{political belief}, religion, and mental and physical ability.''}
 
 \qte
   [Dabbish Laura]
@@ -127,5 +130,17 @@
   {jack-jamieson}
   {We found multiple significant relationships between value-related discussions and turnover, including that discussions about \ul{respectfulness} predict an increase in contributors leaving and a decrease in new contributors, while discussions about \ul{social power} predicted better contributor retention.}
   {jamieson2023predicting}
+
+\thought{Don't explain coding guidelines, setup GitHub Action checks}
+
+\plush{\pptBanner{Some exotic GitHub Action plugins:}
+  \begin{itemize}\setlength\itemsep{0em}
+  \item \href{https://github.com/hadolint/hadolint-action}{hadolint-action} for \ff{Dockerfile}
+  \item \href{https://github.com/marketplace/actions/markdown-lint}{markdownlint-action} for \ff{README.md}
+  \item \href{https://github.com/marketplace/actions/shellcheck}{shellcheck-action} for \ff{.sh} scripts
+  \item \href{https://github.com/Uno-Takashi/checkmake-action}{checkmake-action} for \ff{Makefile}
+  \item \href{https://github.com/ibiqlik/action-yamllint}{action-yamllint} for \ff{YAML} files
+  \item \href{https://github.com/yegor256/bibcop-action}{bibcop-action} for Bib\TeX \ff{.bib} files
+  \end{itemize}}
 
 \end{document}
