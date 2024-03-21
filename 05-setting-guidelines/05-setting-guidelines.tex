@@ -79,7 +79,7 @@
   \begin{itemize}\setlength\itemsep{0em}
   \item Title, logo, badges
   \item What is it? What problem does it solve?
-  \item How to uick start?
+  \item How to quick start?
   \item How to contribute?
   \item Who is who?
   \end{itemize}
@@ -96,12 +96,6 @@
 \thought{Put \ff{CODE\_OF\_CONDUCT.md} file to your repository... not}
 
 \qte
-  [Hana Frluckaj]
-  {hana-frluckaj}
-  {Even though including a code of conduct is considered a \ul{best practice} recommendation to \ul{attract} newcomers, there is, as of yet, no \ul{empirical} evidence backing up that claim.}
-  {li2021code}
-
-\qte
   [Parastou Tourani]
   {parastou-tourani}
   {We found that the top codes of conduct are adopted by hundreds to thousands of projects, while all of them share five common dimensions.}
@@ -112,12 +106,18 @@
   \begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{dimensions.png}
   \source{tourani2017code}
-\par\columnbreak\par
+  \par\columnbreak\par
   ``The Contributor Covenant explicitly mentions sexualized language or imagery, trolling, insulting and publishing of private information of others as unexpected behaviors. Django adds discriminatory jokes and violent threats to this list. Geek Feminism and the Open code of conduct provide a more detailed list, ...''
   \end{multicols}}
 
 \plush{\pptBanner{Django Code of Conduct}
   ``We strive to be a community that welcomes and supports people of \ul{all} backgrounds and identities. This includes, but is not limited to members of any race, ethnicity, culture, national origin, colour, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, \ul{political belief}, religion, and mental and physical ability.''}
+
+\qte
+  [Hana Frluckaj]
+  {hana-frluckaj}
+  {Even though including a code of conduct is considered a \ul{best practice} recommendation to \ul{attract} newcomers, there is, as of yet, no \ul{empirical} evidence backing up that claim.}
+  {li2021code}
 
 \qte
   [Dabbish Laura]
@@ -133,14 +133,32 @@
 
 \thought{Don't explain coding guidelines, setup GitHub Action checks}
 
+\qte
+  [Timothy Kinsman]
+  {timothy-kinsman}
+  {We analyzed the effect of adoption across 926 projects that had adopted GitHub Actions for at least 6 months. Our findings indicate that, on average, there are \ul{more rejected pull requests} and fewer commits on merged pull requests after adopting GitHub Actions.}
+  {kinsman2021software}
+
+\qte
+  [Alexandre Decan]
+  {alexandre-decan}
+  {We observed that workflows tend to be used in the \ul{more active} GitHub projects (more contributors, pull requests, commits and issues).}
+  {decan2022use}
+\pitch{\includegraphics[width=.6\linewidth]{by-language.png}
+  \source{decan2022use}}
+\pitch{\includegraphics[width=.75\linewidth]{by-metrics.png}
+  \source{decan2022use}}
+
+\pitch{Check this repo for inspiration: \href{https://github.com/sdras/awesome-actions}{sdras/awesome-actions} (a curated list of GitHub Action plugins for different purposes).}
+
 \plush{\pptBanner{Some exotic GitHub Action plugins:}
   \begin{itemize}\setlength\itemsep{0em}
   \item \href{https://github.com/hadolint/hadolint-action}{hadolint-action} for \ff{Dockerfile}
   \item \href{https://github.com/marketplace/actions/markdown-lint}{markdownlint-action} for \ff{README.md}
-  \item \href{https://github.com/marketplace/actions/shellcheck}{shellcheck-action} for \ff{.sh} scripts
+  \item \href{https://github.com/marketplace/actions/shellcheck}{shellcheck-action} for Bash \ff{.sh} scripts
   \item \href{https://github.com/Uno-Takashi/checkmake-action}{checkmake-action} for \ff{Makefile}
   \item \href{https://github.com/ibiqlik/action-yamllint}{action-yamllint} for \ff{YAML} files
-  \item \href{https://github.com/yegor256/bibcop-action}{bibcop-action} for Bib\TeX \ff{.bib} files
+  \item \href{https://github.com/yegor256/bibcop-action}{bibcop-action} for Bib\TeX{} \ff{.bib} files
   \end{itemize}}
 
 \end{document}

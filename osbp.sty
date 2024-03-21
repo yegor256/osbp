@@ -23,6 +23,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{osbp}[00.00.0000 0.0.0 This Course Specials]
 
+\usepackage{silence}
+  \WarningFilter{bibentry}{You have used \nobibliography*}
+  \WarningFilter{breakurl}{You are using breakurl while processing via pdflatex.}
+
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[dry,increment]{crumbs}
@@ -41,9 +45,6 @@
 \RequirePackage{url}
 \def\UrlBreaks{\do\/\do-}
 \RequirePackage{breakurl}
-
-\usepackage{silence}
-  \WarningFilter{bibentry}{You have used \nobibliography*}
 
 \newcommand\osbpTitlePage[2]{\begin{pptMiddle}%
   \pptTitle{\thetitle}{}\par
