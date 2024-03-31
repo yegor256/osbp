@@ -27,16 +27,35 @@
 
 \plush{\osbpTitlePage{6}{}}
 
-\pitch{.}
+\thought{Setup continuous integration in order to prove that your product works}
 
-% flaky tests
-% integreation tests
-% jobs vs. files
-% how make your own github action plugin
-%
+\qte
+  [Pei Liu]
+  {pei-liu}
+  {We start by collecting a set of 84,475 open-source Android apps from the most popular three online code hosting sites, namely Github, GitLab, and Bitbucket. We then look into those apps and find that only around 10\% of apps have leveraged CI/CD services, i.e., the \ul{majority} of open-source Android apps are developed \ul{without} accessing CI/CD services.}
+  {liu2022first}
 
-% configure CI in Github
-% how it works in other systems? Gitlab
+\qte
+  [Mehdi Golzadeh]
+  {mehdi-golzadeh}
+  {Together with Travis, GHA covers more than 80\% of all usages. Moreover, in only 18 months GHA has overtaken all other CIs in popularity.}
+  {golzadeh2022rise}
+\pitch{\includegraphics[width=.75\linewidth]{gha-growth.png}
+  \source{golzadeh2022rise}}
+
+\thought{Provide \ff{Dockerfile}}
+
+\thought{Be aware of flaky tests}
+
+\thought{Use fixed versions}
+
+\thought{Enable renovate or dependabot}
+
+\thought{Split tests on fast and slow}
+
+\thought{Use caching in GitHub Action}
+
+\thought{Implement your own GitHub Actions}
 
 % G. Gousios, A. Zaidman, M.-A. Storey, and A. van Deursen, “Work Practices and Challenges in Pull-based Development: The Integrator’s Perspective,” in Proceedings of the 37th International Conference on Software Engineering (ICSE’15), 2015, pp. 358–368.
 % Gousios et al. [18] determine that 75% of projects that use PRs also use CI.
