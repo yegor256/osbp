@@ -43,21 +43,51 @@
 \pitch{\includegraphics[width=.75\linewidth]{gha-growth.png}
   \source{golzadeh2022rise}}
 
+\thought{Use fixed versions of dependencies}
+
+\thought{Use build matrix, with fixed versions}
+
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{matrix.png}
+  \par\columnbreak\par
+  ``A matrix strategy lets you use variables in a single job definition to automatically create multiple job runs that are based on the \ul{combinations} of the variables. For example, you can use a matrix strategy to test your code in multiple versions of a language or on multiple operating systems.''
+  \par
+  --- \href{https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs}{GitHub}
+  \end{multicols}}
+
+\qte
+  [Moritz Beller]
+  {moritz-beller}
+  {The use of multiple integration environments leads to 10\% \ul{more failures} being caught at build time.}
+  {beller2017oops}
+
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{xembly-matrix.png}
+  \par
+  {\small GitHub Actions in \href{https://github.com/yegor256/xembly}{yegor256/xembly}\par}
+  \par\columnbreak\par
+  ``One might argue that it therefore only makes sense to do continuous integration in several environments when their execution leads to \ul{different results}, capturing errors that would not have been caught with one single environment.''
+  \source{beller2017oops}
+  \end{multicols}}
+
 \thought{Provide \ff{Dockerfile}}
 
 \thought{Be aware of flaky tests}
 
-\thought{Use fixed versions}
+\qte
+  [Thomas Durieux]
+  {thomas-durieux}
+  {We observe that developers restart at least 1.72\% of builds, amounting to 56,522 restarted builds in our Travis CI dataset. We observe that more \ul{mature} and more \ul{complex} projects are more likely to include restarted builds. The restarted builds are mostly builds that are initially failing due to a \ul{test}, \ul{network problem}, or a Travis CI \ul{limitations} such as execution timeout.}
+  {durieux2020empirical}
 
-\thought{Enable renovate or dependabot}
+\thought{Enable @renovate or @dependabot}
 
-\thought{Split tests on fast and slow}
+\thought[bugayenko2023blog0822]{Discriminate tests as fast and slow}
 
 \thought{Use caching in GitHub Action}
 
 \thought{Implement your own GitHub Actions}
-
-% G. Gousios, A. Zaidman, M.-A. Storey, and A. van Deursen, “Work Practices and Challenges in Pull-based Development: The Integrator’s Perspective,” in Proceedings of the 37th International Conference on Software Engineering (ICSE’15), 2015, pp. 358–368.
-% Gousios et al. [18] determine that 75% of projects that use PRs also use CI.
 
 \end{document}
