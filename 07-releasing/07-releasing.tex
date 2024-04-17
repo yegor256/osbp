@@ -89,7 +89,39 @@
   {We found that (1)~with shorter release cycles, users do not experience significantly more post-release bugs and (2)~bugs are fixed faster, yet (3)~users experience these bugs earlier during software execution (the program crashes earlier).}
   {khomh2012faster}
 
+\thought{Use SemVer.}
+
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{semver.png}
+  \par\columnbreak\par
+  ``The implication of semantic versioning is that clients may rely on dependencies subject to flexible version constraints, like \texttt{1.2.*}. Such a client may safely upgrade to new micro versions (e.g., from \texttt{1.2.3} to \texttt{1.2.4}), fully automated.''
+  \source{lam2020putting}
+  \end{multicols}}
+
 \thought{Generate release notes automatically.}
+
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=.9\linewidth]{notes.png}
+  \par\columnbreak\par
+  ``Automatically generated release notes provide an automated alternative to manually writing release notes for your GitHub releases. With automatically generated release notes, you can quickly generate an overview of the contents of a release.''
+  {\par\scriptsize\url{https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes}\par}
+  \end{multicols}}
+
+\pitch{
+  \pptBanner{Some Release Notes Generators:}
+  \begin{itemize}\setlength\itemsep{0em}
+    \item \href{https://clickup.com/features/ai/release-notes-generator}{ClickUp}
+    \item \href{https://www.taskade.com/generate/programming/release-notes}{Taskade}
+    \item \href{https://zeda.io/feature/release-note-ai}{Zeda}
+    \item \href{https://www.aha.io/blog/introducing-ai-powered-release-notes}{Aha}
+    \item \href{https://www.releasesnotes.dev/}{ReleasesNotes}
+    \item \href{https://scribehow.com/tools/product-release-note-generator}{ScribeHow}
+    \item \href{https://www.released.so/}{Released}
+    \item \href{https://github.com/marketplace/ai-github-release-notes}{ai-github-release-notes}
+  \end{itemize}
+  {\scriptsize Try Google search with ``generate release notes with AI''\par}}
 
 \qte
   [\nospell{Jianyu Wu}]
@@ -97,7 +129,7 @@
   {We find that: 1) RN producers are more likely to miss information than to include incorrect information, especially for breaking changes; 2) improper layout may bury important information and confuse users; 3) many users find RNs inaccessible due to link deterioration, lack of notification, and obfuscate RN locations; 4) automating and regulating RN production remains challenging despite the great needs of RN producers.}
   {wu2022demystifying}
 
-\thought{Publish packages}
+\thought{Publish binaries.}
 
 \thought{Be aware of malware and protestware.}
 
