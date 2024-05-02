@@ -27,16 +27,31 @@
 
 \plush{\osbpTitlePage{8}{}}
 
-\pitch{.}
+\thought{Make them attractive for programmers.}
 
-% make nice README
-%
+\pitch{
+  \pptBanner{Quick recap of previous lectures:}
+  \begin{enumerate}[label=L\arabic*:]
+    \setlength\itemsep{0em}
+    \item Be nice, say ``Please,'' ``Thanks,'' and ``Sorry''
+    \item Expect and enjoy \ul{bug reports}
+    \item Make pull requests to others --- boost your \ul{profile}
+    \item Prevent chaos by \ul{reviewing} pull request carefully
+    \item Make a nice \ul{\texttt{README}} and use \ul{MIT} license
+    \item Setup many GitHub Actions \ul{jobs}
+    \item Make frequent SemVer \ul{releases}
+  \end{enumerate}}
+
+
+\thought{Keep the momentum.}
 
 \qte
   [\nospell{Tony Ammeter}]
   {tony-ammeter}
   {It appears that \ul{vitality} has a significant effect on popularity over time, indicating that the more active a project is in terms of posting new \ul{releases} and making \ul{announcements}, the more attention it receives from the community.}
   {stewart2002exploratory}
+
+\thought{Keep the momentum.}
 
 \qte
   [\nospell{Hudson Borges}]
@@ -50,7 +65,7 @@
   {We note a sizeable group of people who \ul{follow} others on GitHub and \ul{tweet} about these people’s work, but do not otherwise contribute to those open-source projects.}
   {fang2020need}
 
-\thought{Announce them.}
+\thought{Make some noise.}
 
 \pitch{
   \pptBanner{Some Places to Announce:}
@@ -63,5 +78,24 @@
     \item Twitter
     \item Your blog
   \end{itemize}}
+
+\qte
+  [\nospell{Marco Tulio Valente}]
+  {marco-tulio-valente}
+  {We reveal that \ul{Twitter}, \ul{user meetings}, and \ul{blogs} are the most common promotion channels used by the studied projects.}
+  {borges2019developers}
+\pitch{
+  \begin{multicols}{2}
+  \includegraphics[width=\linewidth]{channels.png}
+  \source{borges2019developers}
+  \par\columnbreak\par
+  The Figure presents the most common promotion channels used by the top-100 projects on GitHub. The most common channel is Twitter, which is used by 56 projects. The second one is Users Meetings (41 projects), followed by Blogs (38 projects), Events (33 projects), and RSS feeds (33 projects).
+  \end{multicols}}
+
+\qte
+  [\nospell{Hemank Lamba}]
+  {hemank-lamba}
+  {We find that tweets have a statistically \ul{significant} and practically sizable effect on obtaining \ul{new stars} and a \ul{small} average effect on attracting \ul{new contributors}.}
+  {fang2022damn}
 
 \end{document}
