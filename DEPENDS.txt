@@ -52,6 +52,7 @@ hard to-be-determined
 hard totpages
 hard transparent
 hard trimspaces
+hard underscore
 hard upquote
 hard varwidth
 hard wrapfig
