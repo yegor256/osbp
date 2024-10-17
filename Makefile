@@ -45,13 +45,19 @@ package: latexmk
 		cp $${d}/*.pdf package
 	done
 	cd package
-	rm -rf index.html
-	for f in $$(ls *.pdf); do
-		echo "<p><a href='$${f}'>$${f}</a></p>" >> index.html
-	done
-	echo "<p>Compiled on: $$(date).</p>" >> index.html
-	echo "<p>LaTeX sources are in <a href='https://github.com/yegor256/osbp'>GitHub</a>.</p>" >> index.html
-# 	echo "<p>Videos are in <a href='https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl'>YouTube</a>.</p>" >> index.html
+	(
+		echo "<html><body style='font-family: monospace; font-size: 18px;'>"
+		echo "<p>Slide decks of all lectures are here:</p>"
+		echo "<ul>"
+		for f in $$(ls *.pdf); do
+			echo "<li><a href='$${f}'>$${f}</a></li>"
+		done
+		echo "</ul>"
+		echo "<p>Compiled on: $$(date).</p>"
+		echo "<p>LaTeX sources are in <a href='https://github.com/yegor256/osbp'>GitHub</a>.</p>"
+		echo "<p>Videos are on <a href='https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl'>YouTube</a>.</p>"
+		echo "</body></html>"
+	) > index.html
 
 copy:
 	for d in $(DIRS); do
