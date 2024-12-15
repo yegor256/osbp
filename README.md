@@ -1,3 +1,5 @@
+# Open Source Best Practices, Lecture Notes
+
 [![latexmk](https://github.com/yegor256/osbp/actions/workflows/latexmk.yml/badge.svg?branch=master)](https://github.com/yegor256/osbp/actions/workflows/latexmk.yml)
 
 There are slides for my series of lectures for
