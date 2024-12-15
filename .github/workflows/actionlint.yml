@@ -18,7 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: latexmk
+name: actionlint
 'on':
   push:
     branches:
@@ -27,24 +27,15 @@ name: latexmk
     branches:
       - master
 jobs:
-  latexmk:
+  actionlint:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: true
-      - uses: yegor256/latexmk-action@0.15.0
-        with:
-          cmd: make
-<<<<<<< Updated upstream
-          depends: DEPENDS.txt
-      - uses: JamesIves/github-pages-deploy-action@v4.7.2
-=======
-          depends: lecture-notes/DEPENDS.txt
-      - uses: JamesIves/github-pages-deploy-action@v4.6.9
->>>>>>> Stashed changes
-        with:
-          branch: gh-pages
-          folder: package
-          clean: false
-        if: github.ref == 'refs/heads/master'
+      - name: Download actionlint
+        id: get_actionlint
+        # yamllint disable-line rule:line-length
+        run: bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+        shell: bash
+      - name: Check workflow files
+        run: ${{ steps.get_actionlint.outputs.executable }} -color
+        shell: bash
