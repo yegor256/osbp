@@ -36,14 +36,8 @@ jobs:
       - uses: yegor256/latexmk-action@0.15.0
         with:
           cmd: make
-<<<<<<< Updated upstream
-          depends: DEPENDS.txt
-      - uses: JamesIves/github-pages-deploy-action@v4.7.2
-=======
           depends: lecture-notes/DEPENDS.txt
-      - uses: JamesIves/github-pages-deploy-action@v4.6.9
->>>>>>> Stashed changes
-        with:
+      - uses: JamesIves/github-pages-deploy-action@v4.7.2
           branch: gh-pages
           folder: package
           clean: false
