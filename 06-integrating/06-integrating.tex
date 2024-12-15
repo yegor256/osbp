@@ -25,35 +25,35 @@
 \newcommand*\thetitle{Integrating}
 \begin{document}
 
-\plush{\osbpTitlePage{6}{iyJ4wiCb9xM}}
+\plush{\lnTitlePage{6}{8}{iyJ4wiCb9xM}}
 
-\thought{Setup continuous integration in order to prove that your product works}
+\lnThought{Setup continuous integration in order to prove that your product works}
 
-\qte
+\lnQuote
   [Bogdan Vasilescu]
   {bogdan-vasilescu}
   {Teams using CI are significantly more effective at merging pull requests submitted by core members. Availability of CI is also associated with external contributors having fewer pull requests rejected.}
   {vasilescu2015quality}
 
-\qte
+\lnQuote
   [Pei Liu]
   {pei-liu}
   {We start by collecting a set of 84,475 open-source Android apps from the most popular three online code hosting sites, namely Github, GitLab, and Bitbucket. We then look into those apps and find that only around 10\% of apps have leveraged CI/CD services, i.e., the \ul{majority} of open-source Android apps are developed \ul{without} accessing CI/CD services.}
   {liu2022first}
 
-\qte
+\lnQuote
   [Mehdi Golzadeh]
   {mehdi-golzadeh}
   {Together with Travis, GHA covers more than 80\% of all usages. Moreover, in only 18 months GHA has overtaken all other CIs in popularity.}
   {golzadeh2022rise}
-\pitch{\includegraphics[width=.75\linewidth]{gha-growth.png}
-  \source{golzadeh2022rise}}
+\lnPitch{\includegraphics[width=.75\linewidth]{gha-growth.png}
+  \lnSource{golzadeh2022rise}}
 
-\thought{Use fixed versions of dependencies}
+\lnThought{Use fixed versions of dependencies}
 
-\thought{Use build matrix, with fixed versions}
+\lnThought{Use build matrix, with fixed versions}
 
-\pitch{
+\lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{matrix.png}
   \par\columnbreak\par
@@ -62,71 +62,71 @@
   --- \href{https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs}{GitHub}
   \end{multicols}}
 
-\qte
+\lnQuote
   [Moritz Beller]
   {moritz-beller}
   {The use of multiple integration environments leads to 10\% \ul{more failures} being caught at build time.}
   {beller2017oops}
 
-\pitch{
+\lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{xembly-matrix.png}
   \par
   {\small GitHub Actions in \href{https://github.com/yegor256/xembly}{yegor256/xembly}\par}
   \par\columnbreak\par
   ``One might argue that it therefore only makes sense to do continuous integration in several environments when their execution leads to \ul{different results}, capturing errors that would not have been caught with one single environment.''
-  \source{beller2017oops}
+  \lnSource{beller2017oops}
   \end{multicols}}
 
-\thought{Provide \ff{Dockerfile}}
+\lnThought{Provide \ff{Dockerfile}}
 
-\pitch{
+\lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{cam-how-to.png}
   \par
   {\small \url{https://github.com/yegor256/cam}\par}
   \par\columnbreak\par
   ``One of the largest benefits about Dockerfiles is that they can be completely \ul{self contained}. Your CI vendor of choice starts to matter less and less because the Dockerfiles themselves are portable and predictable.''
-  \source{batilo2022ways}
+  \lnSource{batilo2022ways}
   \end{multicols}}
 
-\thought{Be aware of flaky tests}
+\lnThought{Be aware of flaky tests}
 
-\qte
+\lnQuote
   [Thomas Durieux]
   {thomas-durieux}
   {We observe that developers restart at least 1.72\% of builds, amounting to 56,522 restarted builds in our Travis CI dataset. We observe that more \ul{mature} and more \ul{complex} projects are more likely to include restarted builds. The restarted builds are mostly builds that are initially failing due to a \ul{test}, \ul{network problem}, or a Travis CI \ul{limitations} such as execution timeout.}
   {durieux2020empirical}
 
-\thought{Enable @renovate or @dependabot}
+\lnThought{Enable @renovate or @dependabot}
 
-\thought[bugayenko2023blog0822]{Discriminate tests as fast and slow}
+\lnThought[bugayenko2023blog0822]{Discriminate tests as fast and slow}
 
-\thought{Use caching in GitHub Action}
+\lnThought{Use caching in GitHub Action}
 
-\qte
+\lnQuote
   [Islem Bouzenia]
   {islem-bouzenia}
   {The majority of the used resources is consumed by testing and building (91.2\%), which is triggered by pull requests (50.7\%), pushes (30.9\%), and regularly scheduled workflows (15.5\%). While existing optimizations, such as \ul{caching} (adopted by 32.9\% of paid-tier repositories), demonstrate a positive impact, they overall remain \ul{underutilized}.}
   {bouzenia2024resource}
 
-\thought{Implement your own GitHub Actions}
+\lnThought{Implement your own GitHub Actions}
 
-\qte
+\lnQuote
   [Sk Golam Saroar]
   {sk-golam-saroar}
   {We found that developers find the composition of YAML files, which are essential for GitHub Action integration, \ul{challenging} and \ul{error-prone}.}
   {saroar2023developers}
-\pitch{
+\lnPitch{
   \begin{multicols}{2}
   \includegraphics[width=.9\linewidth]{actions.png}
   \par
   {\small \url{https://github.com/marketplace}\par}
   \par\columnbreak\par
   ``While there are over \ul{15,000} Actions in existence, an increasing number of Actions are published every day on the Marketplace. This creates the question as to why developers prefer to develop new Actions rather than reusing the existing ones.''
-  \source{saroar2023developers}
+  \lnSource{saroar2023developers}
   \end{multicols}}
-\pitch{\includegraphics[width=.75\linewidth]{why-action.png}
-  \source{saroar2023developers}}
+\lnPitch{\includegraphics[width=.75\linewidth]{why-action.png}
+  \lnSource{saroar2023developers}}
 
 \end{document}

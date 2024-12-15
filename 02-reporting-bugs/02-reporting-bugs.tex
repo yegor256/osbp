@@ -25,42 +25,42 @@
 \newcommand*\thetitle{Reporting Bugs}
 \begin{document}
 
-\plush{\osbpTitlePage{2}{nLcnE4N3Nz4}}
+\plush{\lnTitlePage{2}{8}{nLcnE4N3Nz4}}
 
-\qte
+\lnQuote
   [\nospell{Joel Spolsky}]
   {joel-spolsky}
   {Every good bug report needs exactly three things: \ul{steps} to reproduce, what you \ul{expected} to see, and what you \ul{saw} instead.}
   {spolsky2000bugs}
 
-\qte
+\lnQuote
   [\nospell{Nicolas Bettenburg}]
   {nicolas-bettenburg}
   {Well-written bug reports are likely to get \ul{more attention} among developers than poorly written ones... Steps to reproduce and stack traces are most useful in bug reports. The most severe problems encountered by developers are errors in steps to reproduce, incomplete information, and wrong observed behavior.}
   {bettenburg2008makes}
 
-\qte
+\lnQuote
   [\nospell{Tommaso Dal Sasso}]
   {tommaso-dal-sasso}
   {The elements considered to be harder to provide [while reporting bugs] are the \ul{entity} (e.g., class, file) that likely contains the defect, the \ul{steps} to reproduce the failure, and a \ul{test case} showing the defect.}
   {dal2016makes}
 
-\thought{Expect any program to have an unlimited number of bugs}
+\lnThought{Expect any program to have an unlimited number of bugs}
 
-\qte
+\lnQuote
   {../02-reporting-bugs/hetzel-book}
   {We can \ul{never} be certain that a testing system is correct. These theoretical limit tells us that there will \ul{never} be a way to be sure we have a perfect understanding of what a program is supposed to do (the expected or required results) and that any testing system we might construct will always have some possibility of failing. In short, we \ul{cannot} achieve 100 percent confidence no matter how much time and energy we put into it!}
   {hetzel1993complete}
 
-\qte
+\lnQuote
   [\nospell{Myers, Glenford J.}]
   {glenford-myers}
   {You cannot test a program to guarantee that it is error free... It is impractical, often impossible, to find \ul{all} the errors in a program.}
   {myers2012art}
 
-\thought{Don't ask questions or suggest features, report bugs instead}
+\lnThought{Don't ask questions or suggest features, report bugs instead}
 
-\pitch{\pptBanner{All of These Are Bugs:}
+\lnPitch{\pptBanner{All of These Are Bugs:}
 \begin{itemize}\setlength\itemsep{0em}
 \item Lack of functionality
 \item Lack of tests
@@ -72,31 +72,31 @@
 \end{itemize}
 More about it by \citet{bugayenko2018blog0206}.}
 
-\qte
+\lnQuote
   [\nospell{Reis Christian}]
   {reis-christian}
   {Though it commonly has a prejorative connotation, in the Mozilla Project the term \textbf{bug} is used to refer to any field request for modification in the software, be it an \ul{actual} defect, an enhancement, or a change in functionality. (``bug-driven development'')}
   {reis2002overview}
 
-\qte
+\lnQuote
   [\nospell{Kim Herzig}]
   {kim-herzig}
   {In a manual examination of more than 7,000 issue reports from five open-source projects, we found 33.8\% of all bug reports to be \ul{misclassified} threatening bug prediction models, confusing \ul{bugs} and \ul{features}: On average, 39\% of files marked as defective actually never had a bug.}
   {herzig2013s}
 
-\thought[bugayenko2018blog0724]{Reward yourself for each reported bug}
+\lnThought[bugayenko2018blog0724]{Reward yourself for each reported bug}
 
-\thought{Report strictly one problem per ticket}
+\lnThought{Report strictly one problem per ticket}
 
-\qte
+\lnQuote
   [\nospell{John Anvik}]
   {john-anvik}
   {People play different roles as they interact with reports in a bug repository. The person who submits the report is the \ul{reporter} or the \ul{submitter} of the report. The \ul{triager} is the person who decides if the report is meaningful and who assigns responsibility of the report to a developer. The one that resolves the report is the \ul{resolver}. A person that contributes a fix for a bug is called a \ul{contributor}.}
   {anvik2006should}
 
-\thought[bugayenko2018blog0424]{Exaggerate for effect}
+\lnThought[bugayenko2018blog0424]{Exaggerate for effect}
 
-\pitch{\pptBanner{Do This, While Reporting Bugs:}
+\lnPitch{\pptBanner{Do This, While Reporting Bugs:}
 \begin{itemize}\setlength\itemsep{0em}
 \item Stay cool
 \item Exaggerate
@@ -109,7 +109,7 @@ More about it by \citet{bugayenko2018blog0206}.}
 \end{itemize}
 More about it by \citet{bugayenko2018blog0424}.}
 
-\thought[bugayenko2022blog0329]{Simplify until it's impossible to simplify any further}
+\lnThought[bugayenko2022blog0329]{Simplify until it's impossible to simplify any further}
 
 \pptBanner{Bugs Occam's Razor}
 \begin{pptWide}{2}
@@ -143,11 +143,11 @@ Most probably, the subtracting operator doesn't do anything --- this is the bug.
 \end{pptWide}
 \plush{}
 
-\thought[bugayenko2014blog1124]{Be a prosecutor, not an advocate}
+\lnThought[bugayenko2014blog1124]{Be a prosecutor, not an advocate}
 
-\thought[bugayenko2014blog1124]{Don't give up until some changes are made to the code base}
+\lnThought[bugayenko2014blog1124]{Don't give up until some changes are made to the code base}
 
-\thought[bugayenko2023blog0725]{Prefer a disabled test in lieu of a bug report}
+\lnThought[bugayenko2023blog0725]{Prefer a disabled test in lieu of a bug report}
 
 \pptBanner{Why not?}
 \begin{pptWide}{2}
@@ -169,7 +169,7 @@ fn calculates_23rd_fibonacci_number() {
 \end{pptWide}
 \plush{}
 
-\pitch{\pptBanner{Repositories With a Lot of Bugs (9 Feb 2024)}
+\lnPitch{\pptBanner{Repositories With a Lot of Bugs (9 Feb 2024)}
 {\ttfamily\small\begin{tabular}{lr}
 \toprule
 Github Repository & Issues \\
