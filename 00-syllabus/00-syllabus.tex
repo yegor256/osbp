@@ -26,11 +26,14 @@
 \usepackage{wrapfig}
 \usepackage{href-ul}
 \usepackage{ffcode}
+\usepackage{iexec}
 \usepackage{paralist}
 \newcommand\REG{$^{\tiny{\textsf{\textregistered}}}$}
 \newcommand\TM{$^{\tiny{\textsf{TM}}}$}
 \newcommand\angry[1]{\textcolor{red}{\emph{#1}}}
 \begin{document}
+
+\iexec[quiet]{wget -N --quiet https://www.yegor256.com/images/face-1024x1024.jpg}
 
 {\sffamily{\bfseries\Large Open Source Best Practices (OSBP)}
 
@@ -51,7 +54,7 @@ This course introduces best practices for GitHub-based software development, whi
 \restylefloat{figure}
 \begin{wrapfigure}{r}{1.2in}%
 \raggedleft%
-\includegraphics[width=1.2in]{photo.jpg}%
+\includegraphics[width=1.2in]{face-1024x1024.jpg}%
 \end{wrapfigure}
 \textbf{Who is the teacher?}\\
 Yegor is developing software for more than 30 years, being a hands-on programmer
