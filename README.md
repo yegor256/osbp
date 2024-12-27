@@ -33,4 +33,4 @@ this slidedeck are either originally made by the author or taken from public
 Internet sources, such as website. Copyright belongs to their respected
 authors.
 
-[playlist]: https://www.youtube.com/playlist?list=PLaIsQH4uc08x_T-Aelduv3Zf0DWRx40pq
+[playlist]: https://www.youtube.com/playlist?list=PLaIsQH4uc08zjutyoBOtoa6fnxzrCQK2Q
