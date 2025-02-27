@@ -18,6 +18,8 @@ path = [
     ".gitattributes",
     ".gitignore",
     ".gitleaksignore",
+    ".gitmodules",
+    ".latexmkrc",
     ".pdd",
     ".xcop",
     "Gemfile.lock",
