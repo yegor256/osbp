@@ -5,6 +5,7 @@
 \usepackage{enumerate}
 \usepackage{multicol}
 \usepackage{wrapfig}
+\usepackage{booktabs}
 \usepackage{href-ul}
 \usepackage{ffcode}
 \usepackage{iexec}
@@ -134,68 +135,41 @@ and
 \newpage
 \section*{Grading}
 
-At the first lecture, students form groups of \textbf{2--3} people in each one (no exceptions!).
-Each group picks a research topic from the list suggested by the teacher.
+To pass the course, students must attend lectures and earn points by contributing to any of these open-source projects:
 
-Each group writes a research paper in \LaTeX, according
-to the \href{https://www.yegor256.com/2022/08/24/research-paper-template.html}{guideline}.
-The length of the pager may not exceed four pages in
-\href{https://ctan.org/pkg/acmart}{acmart/sigplan} 10pt format
-(including references and appendices).
-The paper must be presented to the teacher \angry{incrementally}, section by section:
-\begin{inparaenum}[1)]
-\item Method,
-\item Related Work,
-\item Results,
-\item Discussion,
-\item Conclusion,
-\item Introduction,
-and
-\item Abstract.
-\end{inparaenum}
-Once a section is \angry{approved} by the teacher, the next section may be presented for review.
+\begin{itemize}
+    \item \href{https://github.com/objectionary/lints}{\ff{objectionary/lints}} (Java + XSLT)
+    \item \href{https://github.com/cqfn/aibolit}{\ff{cqfn/aibolit}} (Python)
+    \item \href{https://github.com/objectionary/eoc}{\ff{objectionary/eoc}} (JavaScript)
+    \item \href{https://github.com/yegor256/0rsk}{\ff{yegor256/0rsk}} (Ruby)
+    \item \href{https://github.com/objectionary/reo}{\ff{objectionary/reo}} (Rust)
+\end{itemize}
 
-After a presentation of a section, the teacher may ask the group to \angry{stop}
-working with the paper. In this case, no sections may be presented for review any more: they all will be rejected.
-This decision is \angry{subjectively} made by the teacher and will \angry{not} be explained
-to the students, however the following may contribute to such a
-negative decision:
-\begin{inparaenum}[a)]
-    \item ChatGPT,
-    \item plagiarism,
-    \item negligence,
-    and
-    \item laziness.
-\end{inparaenum}
+There is no oral or written exam at the end of the course. Instead, each student earns points for the following results:
 
-When the Abstract is accepted by the teacher, a group may ask a student from another
-group to review their paper, according to
-\href{https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html}{this guideline}.
-The review must be accepted by the TA.
-
-There is no exam at the end of the course. Instead,
-each student earns points for the following results:\\
 \renewcommand{\arraystretch}{1}
 \begin{tabular}{lrr}
+\toprule
 Result & Points & Limit \\
-\hline
-Attended a lecture & +2 & 8 \\
-Attended a lab & +2 & 8 \\
-Merged a pull request to a suggested repo & +4 & 48 \\
-Reviewed a paper of another group & +3 & 9 \\
-``Method'' section (\href{https://www.yegor256.com/2023/10/11/method-of-research.html}{guideline}) & +8 \\
-``Related Work'' section (\href{https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html}{guideline}) & +12 \\
-``Results'' and ``Discussion'' sections (\href{https://www.yegor256.com/2023/12/11/results-and-discussion.html}{guideline}) & +12 \\
-``Conclusion'' & +6 \\
-``Introduction'' section & +6 \\
-``Abstract'' and Title & +4 \\
+\midrule
+Attended a lecture & +1 & 6 \\
+Submitted a ticket (that was accepted) & +2 & 8 \\
+Submitted a pull request (that was merged) & +4 & 32 \\
+\bottomrule
 \end{tabular}
 
-Then, 55+ points mean ``A,'' 47+ mean ``B,'' and 23+ mean ``C.''
+Final grades are based on accumulated points:
+\begin{itemize}
+    \item 25+ earns an ``A,''
+    \item 17+ a ``B,''
+    and
+    \item 9+ a ``C.''
+\end{itemize}
 
-An online lecture is counted as ``attended'' only if a student was personally
-presented in Zoom for more than 75\% of the lecture's time. Watching the
-lecture from the computer of a friend doesn't count.
+If eight or fewer points are accumulated during the course, the student may still earn them before the retake.
+
+An online lecture is counted as ``attended'' only if a student was personally present in Zoom for more than 75\% of the lecture's time.
+Watching the lecture from a friend's computer \emph{doesn't} count.
 
 % \newpage
 % \section*{Learning Material}
