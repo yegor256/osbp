@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2023-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
+.PHONY: all clean test
 GITHUB=yegor256/osbp
 PLAYLIST=PLaIsQH4uc08zjutyoBOtoa6fnxzrCQK2Q
 
