@@ -1,7 +1,6 @@
-_minted-*/
-_minted-wp/
-.DS_Store
-.idea/
+# SPDX-FileCopyrightText: Copyright (c) 2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 *-SAVE-ERROR
 *.aux
 *.bbl
@@ -20,6 +19,9 @@ _minted-wp/
 *.run.xml
 *.toc
 *.xcp
+.DS_Store
+.idea/
+00-syllabus/00-syllabus.pdf
 01-debating/01-debating.pdf
 02-reporting-bugs/02-reporting-bugs.pdf
 03-making-changes/03-making-changes.pdf
@@ -28,9 +30,10 @@ _minted-wp/
 06-integrating/06-integrating.pdf
 07-releasing/07-releasing.pdf
 08-gaining-popularity/08-gaining-popularity.pdf
+_minted-*/
+_minted-wp/
 face-1024x1024.jpg
 node_modules/
 package/
 svg-inkscape/
-syllabus/syllabus.pdf
 target/
